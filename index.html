@@ -394,6 +394,113 @@ section{position:relative}
 .rv{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
 html:not(.gs) .rv:not(.in){transform:translateY(26px)}
 @media(prefers-reduced-motion:reduce){.rv{transition:none;transform:none!important}}
+
+/* progress */
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;background:linear-gradient(90deg,var(--sand1),var(--taupe3));transform-origin:left;transform:scaleX(0)}
+/* chat story */
+.chat{display:flex;flex-direction:column;gap:9px}
+.chat .row{display:flex;align-items:flex-end;gap:8px}
+.chat .row.me{justify-content:flex-end}
+.chat .av{width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:12px;color:#fff;background:var(--ink)}
+.chat .row.me .av{background:var(--sand2)}
+.chat .bb{max-width:78%;padding:10px 14px;border-radius:18px 18px 18px 5px;background:var(--card2);font-size:16px;line-height:1.4;color:var(--ink)}
+.chat .row.me .bb{border-radius:18px 18px 5px 18px;background:var(--ink);color:#fff}
+.chat .bb.de{background:#e9e1d8;color:var(--sandink);font-size:20px;letter-spacing:-.03em}
+.chat .nar{align-self:center;font-size:13px;color:var(--mute);background:#fff;border:1px solid var(--line);border-radius:99px;padding:5px 12px;text-align:center}
+.chat .typing{display:inline-flex;gap:4px;padding:12px 14px;border-radius:18px;background:var(--card2);width:max-content}
+.chat .typing i{width:6px;height:6px;border-radius:50%;background:var(--mute2)}
+/* marquee */
+.bandw{overflow:hidden;padding:10px 0}
+.band{background:var(--taupe);color:#fff;transform:rotate(-2deg);margin:20px -20px 40px;padding:16px 0;overflow:hidden;white-space:nowrap}
+.band .trk{display:inline-flex;gap:28px;font-size:clamp(26px,6vw,44px);letter-spacing:-.05em;padding-right:28px}
+.band .trk span{display:inline-flex;align-items:center;gap:28px}
+.band .trk em{font-style:italic}
+.band .trk b{font-weight:300;opacity:.55;font-size:.6em}
+html:not(.gs) .band .trk{animation:mq 30s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* anatomy */
+.anat{position:relative;display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:2px 0 18px;padding:14px;border-radius:var(--r-md);background:linear-gradient(135deg,#f3efe9,#e9e0d6)}
+.anat .pz{display:inline-flex;align-items:center;gap:6px;background:#fff;border-radius:12px;padding:8px 11px;font-size:16px;letter-spacing:-.02em;box-shadow:0 6px 16px -10px rgba(93,74,59,.6)}
+.anat .ar{font-size:12px;color:var(--mute);background:var(--card2);border-radius:99px;padding:2px 8px}
+.anat .pz.last .ar{background:var(--ink);color:#fff}
+.anat .op{font-size:20px;color:var(--taupe3);display:inline-block}
+.anat .res2{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:#fff;border-radius:12px;padding:8px 12px;font-size:17px;letter-spacing:-.03em}
+.anat .res2 .ar{background:var(--sand1);color:var(--sandink)}
+.anat .note{flex-basis:100%;font-size:12.5px;color:var(--sandink);margin-top:2px}
+.anat .fly{position:absolute;left:0;top:0;font-size:12px;background:var(--ink);color:#fff;border-radius:99px;padding:2px 8px;pointer-events:none;opacity:0}
+/* clouds */
+.cl{fill:#fff;opacity:.75}
+/* ad: intro */
+.adtag{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);border:1px solid var(--line);border-radius:99px;padding:6px 12px}
+.adlead{font-size:clamp(18px,4.6vw,23px);line-height:1.45;color:var(--ink2);letter-spacing:-.02em;margin:30px 0 22px;max-width:760px}
+.adlead b{color:var(--ink)}
+.adbtns{display:flex;gap:10px;flex-wrap:wrap}
+.mock{position:relative;margin-top:30px;border-radius:22px;background:#fff;box-shadow:0 40px 80px -40px rgba(29,51,70,.45);overflow:hidden;border:1px solid var(--line)}
+.mbar{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid #eee;font-size:12px;color:var(--mute)}
+.mbar i{width:9px;height:9px;border-radius:50%;background:#ff5f57;box-shadow:14px 0 0 #febc2e,28px 0 0 #28c840;margin-right:30px}
+.mbody{display:grid;grid-template-columns:78px 1fr;min-height:380px}
+@media(min-width:760px){.mbody{grid-template-columns:190px 1fr}}
+.mside{background:#f7f6f3;padding:12px 8px;display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--ink2)}
+.mside span{padding:6px 8px;border-radius:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mside span.on{background:#e9e1d8;color:var(--sandink);font-weight:500}
+.mpage{padding:16px 14px 18px}
+.mtitle{font-size:clamp(20px,5vw,30px);letter-spacing:-.045em;font-weight:500;line-height:1.1}
+.mtags{display:flex;gap:6px;margin:8px 0 12px}
+.mtags span{font-size:11px;background:#f1efec;border-radius:6px;padding:3px 8px;color:var(--mute)}
+.mblk{border:1.5px solid #eee;border-radius:12px;padding:10px 12px;margin-bottom:8px;transition:border-color .3s,background .3s}
+.mblk.on{border-color:var(--sand2);background:#fbf8f5}
+.mblk .mh{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500}
+.mblk .mh .ic{width:16px;height:16px;color:var(--taupe3)}
+@media(max-width:520px){.mblk .mh small{display:none}}
+.mblk .mh small{margin-left:auto;font-weight:300;color:var(--mute);font-size:11px}
+.sk{height:7px;border-radius:4px;background:#eceae6;margin-top:7px}
+.mvid{margin-top:8px;height:64px;border-radius:9px;background:linear-gradient(120deg,#9fc4dd,#d8c3ae);position:relative;overflow:hidden}
+.mvid .pb{position:absolute;left:50%;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;color:var(--ink)}
+.mvid .pb .ic{width:13px;height:13px}
+.mvid .vp{position:absolute;left:0;bottom:0;height:4px;width:100%;background:var(--ink);transform-origin:left;transform:scaleX(.35)}
+.mex{margin-top:8px;font-size:13px;color:var(--ink2);line-height:2}
+.mex u{text-decoration:none;display:inline-block;min-width:44px;border-bottom:1.5px solid var(--sand2);text-align:center;color:var(--ink);font-weight:500}
+.mok{display:flex;flex-direction:column;gap:5px;margin-top:8px;font-size:12.5px;color:var(--ink2)}
+.mok span{display:flex;gap:6px;align-items:flex-start}
+.mok .ic{width:14px;height:14px;color:#3c8a46;margin-top:2px}
+.mcur{position:absolute;left:0;top:0;width:22px;height:22px;z-index:5;pointer-events:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
+.mcap{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.mcap span{font-size:13px;padding:7px 12px;border-radius:99px;background:var(--card2);color:var(--mute);transition:background .3s,color .3s}
+.mcap span.on{background:var(--ink);color:#fff}
+.steps{position:relative;display:grid;gap:14px;padding-left:46px}
+.steps .ln2{position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:#e3ddd6}
+.steps .ln2 i{display:block;width:100%;height:100%;background:var(--sand2);transform-origin:top;transform:scaleY(0)}
+.st{position:relative;background:var(--card);border-radius:var(--r-lg);padding:20px}
+.st .dot{position:absolute;left:-46px;top:16px;width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:15px}
+.st h4{margin:0 0 6px;font-weight:400;font-size:21px;letter-spacing:-.04em}
+.st p{margin:0;font-size:15px;color:var(--ink2)}
+.st .chips{margin-top:12px}
+.flow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:12px}
+.flow span{background:#f1efec;border-radius:10px;padding:7px 10px;font-size:13px;display:inline-flex;gap:6px;align-items:center}
+.flow span .ic{width:14px;height:14px;color:var(--taupe3)}
+.flow b{font-weight:300;color:var(--mute2)}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:900px){.who{grid-template-columns:repeat(4,1fr)}}
+.wh{background:var(--card);border-radius:var(--r-lg);padding:18px;display:flex;flex-direction:column;gap:8px}
+.wh .ico{width:46px;height:46px;border-radius:14px;background:linear-gradient(180deg,var(--sand1),var(--sand2));display:grid;place-items:center;color:#fff}
+.wh .ico .ic{width:22px;height:22px}
+.wh b{font-weight:400;font-size:18px;letter-spacing:-.03em}
+.wh span{font-size:13.5px;color:var(--mute);line-height:1.4}
+.wh .lvl{align-self:flex-start;font-size:12px;background:#e9e1d8;color:var(--sandink);border-radius:99px;padding:3px 10px}
+.pick{background:var(--card);border-radius:var(--r-xl);padding:22px;margin-bottom:14px;text-align:center}
+.pick .lv{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 8px}
+.pick .lv button{min-width:56px;padding:12px 14px;border-radius:12px;background:#f1efec;font-size:16px;transition:background .2s,color .2s,scale .2s}
+.pick .lv button.on{background:var(--ink);color:#fff;scale:1.06}
+.pick .ans{font-size:15px;color:var(--ink2);min-height:22px}
+.pick .ans b{color:var(--ink)}
+.pr.rec{outline:3px solid var(--sand2);outline-offset:3px}
+.faq{display:flex;flex-direction:column;gap:8px}
+.faq details{background:var(--card);border-radius:var(--r-md);padding:0 18px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 0;font-size:17px;letter-spacing:-.025em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font-size:24px;color:var(--taupe3);transition:rotate .3s}
+.faq details[open] summary:after{rotate:45deg}
+.faq details p{font-size:15px;color:var(--ink2);margin:0 0 18px}
 </style>
 
 </head>
@@ -433,6 +540,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
 <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
 </svg>
 
+<div class="prog" id="prog"></div>
 <header class="top">
   <div class="bar">
     <a class="logo" href="#top"><span>STELLAS</span><small>Слова без перевода</small></a>
@@ -451,6 +559,9 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
     <span class="lab">Deutschland, 17:00</span><span class="no">01</span>
     <svg class="sky" viewBox="0 0 400 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
       <circle id="sun" cx="300" cy="150" r="34" fill="#fff4e0" opacity=".9"/>
+      <g id="cl1" class="cl"><ellipse cx="90" cy="110" rx="46" ry="13"/><ellipse cx="108" cy="100" rx="26" ry="14"/></g>
+      <g id="cl2" class="cl" opacity=".55"><ellipse cx="250" cy="70" rx="38" ry="10"/><ellipse cx="236" cy="62" rx="20" ry="11"/></g>
+      <g id="birds" fill="none" stroke="#3d4f60" stroke-width="1.6" stroke-linecap="round"><path d="M180 170q5-5 10 0q5-5 10 0"/><path d="M206 184q4-4 8 0q4-4 8 0"/></g>
       <g fill="#c7d6e0" opacity=".9"><path d="M0 330h22v-60h18v-30h14v30h16v60h20v-90l14-14 14 14v90h26v-120h20v120h18v-70h24v70h20v-46h16v-40l10-10 10 10v86h30v-80h22v80h26v-56h24v226H0z"/></g>
       <g fill="#b19985"><path d="M0 380c40-12 80-12 120 0s80 12 120 0 80-12 120 0 40 6 40 6v114H0z"/></g>
       <g fill="#8e7765"><path d="M0 430c50-10 100-6 150 4s110 10 160-2 90-6 90-6v74H0z"/></g>
@@ -466,15 +577,19 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
   <div class="story">
     <div class="card rv">
       <div class="sec-head" style="margin-bottom:14px"><span class="lbl">История</span><span class="num">01</span></div>
-      <div class="dlg">
-        <p>Я учусь в Австрии. У меня был одногруппник. Лукас.</p>
-        <p>Пятница. 16:58. Лукас закрывает ноутбук и говорит:</p>
-        <p><span class="q de">Feierabend!</span> <button class="say" data-say="Feierabend!" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></p>
-        <p class="me">Говорю, что. Он говорит, Feierabend. Говорю, переведи.</p>
-        <p>Он думает. Говорит, ну это когда работа кончилась.</p>
-        <p class="me">Говорю, конец рабочего дня? Говорит, нет. Говорю, вечер? Говорит, нет. Говорю, праздник? Говорит, почти.</p>
-        <p>Лукас ушёл. Я остался. С переводчиком.</p>
-        <p>Переводчик сказал, «конец рабочего дня». Думаю, ну нет. Конец рабочего дня так не произносят. Так произносят «свобода».</p>
+      <div class="chat" id="chat">
+        <span class="nar">Австрия · пятница · 16:58</span>
+        <div class="row"><span class="av">L</span><div class="bb de">Feierabend! <button class="say" data-say="Feierabend!" aria-label="Послушать" style="width:30px;height:30px;vertical-align:middle;margin-left:4px"><svg class="ic"><use href="#i-volume-2"/></svg></button></div></div>
+        <div class="row me"><div class="bb">Что?</div><span class="av">Я</span></div>
+        <div class="row"><span class="av">L</span><div class="bb">Feierabend.</div></div>
+        <div class="row me"><div class="bb">Переведи.</div><span class="av">Я</span></div>
+        <div class="row"><span class="av">L</span><div class="bb">Ну… это когда работа кончилась.</div></div>
+        <div class="row me"><div class="bb">Конец рабочего дня?</div><span class="av">Я</span></div>
+        <div class="row"><span class="av">L</span><div class="bb">Nein.</div></div>
+        <div class="row me"><div class="bb">Вечер? Праздник?</div><span class="av">Я</span></div>
+        <div class="row"><span class="av">L</span><div class="bb">Почти. Tschüss!</div></div>
+        <span class="nar">Лукас ушёл. Я остался. С переводчиком.</span>
+        <p style="font-size:17px;color:var(--ink2);margin:10px 0 0">Переводчик сказал, «конец рабочего дня». Думаю, ну нет. Конец рабочего дня так не произносят. Так произносят «свобода».</p>
         <p class="punch">Лукас к тому моменту уже пил пиво. Это и&nbsp;был Feierabend.</p>
       </div>
     </div>
@@ -511,6 +626,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
     <div class="team"><span style="background:#b89a7f">DE</span><span style="background:#1d3346">RU</span><span style="background:#8d7867">EN</span></div>
   </div>
 </section>
+<div class="bandw"><div class="band" id="band" aria-hidden="true"><div class="trk" id="trk"><span>Schadenfreude <b>✳</b> <em>Fernweh</em> <b>✳</b> Feierabend <b>✳</b> <em>Torschlusspanik</em> <b>✳</b> Kummerspeck <b>✳</b></span><span>Schadenfreude <b>✳</b> <em>Fernweh</em> <b>✳</b> Feierabend <b>✳</b> <em>Torschlusspanik</em> <b>✳</b> Kummerspeck <b>✳</b></span></div></div></div>
 
 <!-- LEGO -->
 <section class="wrap sec" id="lego" style="padding-top:20px">
@@ -555,6 +671,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <button class="rp" aria-label="Повторить"><svg class="ic"><use href="#i-rotate-ccw"/></svg></button>
       </div>
       <div class="wtext">
+        <div class="anat" data-parts="der Schaden|die Freude" data-art="die" data-word="Schadenfreude"></div>
         <div class="wname"><h3>Schadenfreude</h3><span class="parts">der Schaden — вред<br>die Freude — радость</span></div>
         <span class="loc"><svg class="ic"><use href="#i-map-pin"/></svg>Буквально: <b>радость от вреда</b></span>
         <p>Шёл по Вене. Январь. Гололёд. Впереди мужик в пальто. Говорит по телефону. Очень важный. Явно про миллионы.</p>
@@ -596,6 +713,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <button class="rp" aria-label="Повторить"><svg class="ic"><use href="#i-rotate-ccw"/></svg></button>
       </div>
       <div class="wtext">
+        <div class="anat" data-parts="— fern|das Weh" data-art="das" data-word="Fernweh"></div>
         <div class="wname"><h3>Fernweh</h3><span class="parts">fern — далёкий<br>das Weh — боль</span></div>
         <span class="loc"><svg class="ic"><use href="#i-map-pin"/></svg>Буквально: <b>боль по далёкому</b></span>
         <p>Сижу дома. Тепло. Еда есть. Wi-Fi ловит. Жизнь удалась.</p>
@@ -643,6 +761,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <button class="rp" aria-label="Повторить"><svg class="ic"><use href="#i-rotate-ccw"/></svg></button>
       </div>
       <div class="wtext">
+        <div class="anat" data-parts="die Feier|der Abend" data-art="der" data-word="Feierabend"></div>
         <div class="wname"><h3>Feierabend</h3><span class="parts">die Feier — праздник<br>der Abend — вечер</span></div>
         <span class="loc"><svg class="ic"><use href="#i-map-pin"/></svg>Буквально: <b>праздничный вечер</b></span>
         <p>С Лукасом ты уже знаком. Он не исключение. Это национальная религия.</p>
@@ -685,6 +804,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <button class="rp" aria-label="Повторить"><svg class="ic"><use href="#i-rotate-ccw"/></svg></button>
       </div>
       <div class="wtext">
+        <div class="anat" data-parts="das Tor|der Schluss|die Panik" data-art="die" data-word="Torschlusspanik"></div>
         <div class="wname"><h3>Torschluss&shy;panik</h3><span class="parts">das Tor — ворота<br>der Schluss — закрытие<br>die Panik — паника</span></div>
         <span class="loc"><svg class="ic"><use href="#i-map-pin"/></svg>Буквально: <b>паника, что ворота закроются</b></span>
         <p>Средневековье. Город на ночь закрывали. Не успел до заката, ночуешь за стеной. С волками. Отсюда паника.</p>
@@ -730,6 +850,7 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
         <button class="rp" aria-label="Повторить"><svg class="ic"><use href="#i-rotate-ccw"/></svg></button>
       </div>
       <div class="wtext">
+        <div class="anat" data-parts="der Kummer|der Speck" data-art="der" data-word="Kummerspeck"></div>
         <div class="wname"><h3>Kummerspeck</h3><span class="parts">der Kummer — горе<br>der Speck — сало</span></div>
         <span class="loc"><svg class="ic"><use href="#i-map-pin"/></svg>Буквально: <b>сало от горя</b></span>
         <p>Сдал экзамен. Плохо. Расстроился.</p>
@@ -848,21 +969,50 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
 
 <section id="platform">
   <div class="wrap adhead">
-    <h2 class="h-xxl split" style="font-size:clamp(40px,10.5vw,104px)">Ты прочитал этот гайд <span class="tpill"><svg class="ic"><use href="#i-clock"/></svg></span> за 7 минут. <span class="it">Таких 340+</span></h2>
-    <div class="story" style="margin-top:26px">
-      <div class="card rv" style="padding:26px 22px">
-        <div class="dlg">
-          <p>У меня было четыре учебника немецкого.</p>
-          <p>Первый я открыл. Дошёл до Dativ. Закрыл.</p>
-          <p>Второй и третий подарил. Людям, которых не очень люблю.</p>
-          <p>Четвёртый подпирает шкаф. Шкаф стоит ровно.</p>
-          <p class="me">Думаю, проблема не во мне. Проблема в том, что учебник не рассказывает историй. А запоминаю я только истории. Как ты сейчас запомнил Kummerspeck.</p>
-          <p class="punch">Поэтому мы сделали Stellas. Шкаф, правда, до сих пор на учебнике.</p>
+    <span class="adtag"><svg class="ic"><use href="#i-sparkles"/></svg>Реклама нашей платформы</span>
+    <h2 class="h-xxl split" style="font-size:clamp(40px,10.5vw,104px);margin-top:16px">Понравилось? <span class="tpill"><svg class="ic"><use href="#i-heart-crack"/></svg></span> Это <span class="it">один гайд из&nbsp;340+</span></h2>
+    <p class="adlead"><b>Stellas</b> это платформа с гайдами по немецкому <b>от нуля (A0) до C1</b>. Каждая тема объяснена как эта страница: коротко, с примерами, видео и упражнениями. Всё лежит в <b>Notion</b>, открывается на телефоне и ноутбуке, даже без интернета.</p>
+    <div class="adbtns"><a class="btn" href="#price">Смотреть цены <svg class="ic"><use href="#i-arrow-up-right"/></svg></a><a class="btn ghost" href="#how">Как это работает</a></div>
+
+    <div class="mock rv" id="mock">
+      <div class="mbar"><i></i>Notion · Stellas A0–C1</div>
+      <div class="mbody">
+        <div class="mside" id="mside"><span>Главная</span><span>A0</span><span>A1</span><span class="m-a2">A2</span><span>B1</span><span>B2</span><span>C1</span><span>Экзамены</span><span>Словарь</span><span>Трекер</span></div>
+        <div class="mpage">
+          <div class="mtitle">Dativ без зубрёжки</div>
+          <div class="mtags"><span>A2</span><span>грамматика</span><span>12 мин</span></div>
+          <div class="mblk" data-s="0"><div class="mh"><svg class="ic"><use href="#i-book-open"/></svg>1. Объяснение<small>как на канале</small></div><div class="sk" style="width:92%"></div><div class="sk" style="width:74%"></div></div>
+          <div class="mblk" data-s="1"><div class="mh"><svg class="ic"><use href="#i-play"/></svg>2. Видео<small>разбор темы</small></div><div class="mvid"><span class="pb"><svg class="ic"><use href="#i-play"/></svg></span><span class="vp" id="mvp"></span></div></div>
+          <div class="mblk" data-s="2"><div class="mh"><svg class="ic"><use href="#i-puzzle"/></svg>3. Упражнение<small>вставь артикль</small></div><div class="mex">Ich helfe <u data-t="dem">dem</u> Mann. Ich danke <u data-t="der">der</u> Frau.</div></div>
+          <div class="mblk" data-s="3"><div class="mh"><svg class="ic"><use href="#i-check"/></svg>4. Ответы и разбор<small>почему так</small></div><div class="mok"><span><svg class="ic"><use href="#i-check"/></svg>helfen + Dativ → dem Mann</span><span><svg class="ic"><use href="#i-check"/></svg>danken + Dativ → der Frau</span></div></div>
         </div>
       </div>
+      <svg class="mcur" id="mcur" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#1d3346" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="mcap" id="mcap"><span>Выбрал уровень</span><span>Прочитал</span><span>Посмотрел видео</span><span>Сделал упражнение</span><span>Проверил ответы</span></div>
+    <p class="sm" style="margin-top:10px">Так выглядит каждый гайд по грамматике. Схематично, но честно.</p>
+  </div>
+
+  <div class="wrap sec" id="how">
+    <div class="sec-head"><h2 class="h-l split">Как это <span class="it">работает</span></h2><span class="num">3 шага</span></div>
+    <div class="steps" id="steps"><span class="ln2"><i id="stl"></i></span>
+      <div class="st rv"><span class="dot">1</span><h4>Выбираешь уровень</h4><p>A0–A2, если с нуля. B1–C1, если уже говоришь. Или сразу всё, так выгоднее.</p><div class="chips"><span class="chip">A0–A2 · 20 €</span><span class="chip">B1–C1 · 20 €</span><span class="chip"><b>A0–C1 · 30 €</b></span></div></div>
+      <div class="st rv"><span class="dot">2</span><h4>Платишь один раз</h4><p>Не подписка. Доступ навсегда, все будущие обновления бесплатно.</p></div>
+      <div class="st rv"><span class="dot">3</span><h4>Открываешь в Notion и учишь</h4><p>На телефоне, планшете или ноутбуке. Каждый гайд устроен одинаково:</p><div class="flow"><span><svg class="ic"><use href="#i-book-open"/></svg>объяснение</span><b>→</b><span><svg class="ic"><use href="#i-play"/></svg>видео</span><b>→</b><span><svg class="ic"><use href="#i-puzzle"/></svg>упражнение</span><b>→</b><span><svg class="ic"><use href="#i-check"/></svg>разбор ответов</span></div></div>
     </div>
   </div>
 
+  <div class="wrap" style="padding-bottom:60px">
+    <div class="sec-head"><h2 class="h-l split">Кому <span class="it">подойдёт</span></h2></div>
+    <div class="who">
+      <div class="wh rv"><span class="ico"><svg class="ic"><use href="#i-sparkles"/></svg></span><b>Начинаешь с нуля</b><span>Алфавит, артикли, первые фразы. Без каши в голове.</span><span class="lvl">A0–A2</span></div>
+      <div class="wh rv"><span class="ico"><svg class="ic"><use href="#i-message-circle"/></svg></span><b>Застрял на середине</b><span>Грамматика есть, а речь не идёт. Диалоги и ИИ-чат.</span><span class="lvl">B1–C1</span></div>
+      <div class="wh rv"><span class="ico"><svg class="ic"><use href="#i-house"/></svg></span><b>Живёшь в Германии</b><span>Врач, ведомства, работа. Лексика для жизни.</span><span class="lvl">любой уровень</span></div>
+      <div class="wh rv"><span class="ico"><svg class="ic"><use href="#i-graduation-cap"/></svg></span><b>Сдаёшь экзамен</b><span>Goethe, telc, DTZ, ÖSD, TestDaF в одном разделе.</span><span class="lvl">A1–C1</span></div>
+    </div>
+  </div>
+
+  <div class="wrap"><div class="sec-head"><h2 class="h-l split">Что <span class="it">внутри</span></h2><span class="num">6 разделов</span></div></div>
   <div class="wrap" style="margin-top:14px">
     <div class="svc" id="svc">
       <div class="sv first rv"><span class="bg">ST<br>EL</span><div class="tx"><span style="font-size:12px;letter-spacing:.12em;color:var(--mute);margin:0 0 10px">STELLAS · NOTION</span><b>Мы являемся платформой <em class="it">полного цикла</em></b><span style="color:var(--ink2)">От A0 до C1. Грамматика, лексика, экзамены, фильмы.</span></div></div>
@@ -940,12 +1090,24 @@ html:not(.gs) .rv:not(.in){transform:translateY(26px)}
 
   <div class="wrap sec" id="price">
     <h2 class="h-xl split" style="text-align:center;margin-bottom:30px">Сколько стоит <span class="it">не учебник</span></h2>
+    <div class="pick rv"><div class="h-m">Какой у тебя уровень?</div><div class="lv" id="lvpick"><button>A0</button><button>A1</button><button>A2</button><button>B1</button><button>B2</button><button>C1</button><button>не знаю</button></div><div class="ans" id="lvans">Нажми, подскажем, что брать.</div></div>
     <div class="prices">
-      <div class="pr rv"><span class="lv">Для тех, кто с нуля</span><span class="h-m">A0–A2</span><span class="pp">20 €</span><ul><li><svg class="ic"><use href="#i-check"/></svg>Грамматика и лексика с нуля</li><li><svg class="ic"><use href="#i-check"/></svg>Лексика для жизни в Германии</li><li><svg class="ic"><use href="#i-check"/></svg>Доступ навсегда</li></ul><a class="btn ghost" href="https://app.lava.top/801303618?tabId=products&amp;sort=published">Выбрать <svg class="ic"><use href="#i-arrow-up-right"/></svg></a></div>
-      <div class="pr hit rv"><span class="badge">выгоднее всего</span><span class="lv">Весь путь</span><span class="h-m" style="color:#fff">A0–C1</span><span class="pp">30 €<s>40 €</s></span><ul><li><svg class="ic"><use href="#i-check"/></svg>Обе платформы: 340+ гайдов</li><li><svg class="ic"><use href="#i-check"/></svg>Экзамены, трекер, флеш-карты</li><li><svg class="ic"><use href="#i-check"/></svg>Гайды в Gemini с ИИ-чатом</li><li><svg class="ic"><use href="#i-gift"/></svg>A0–A2 на украинском в подарок</li><li><svg class="ic"><use href="#i-infinity"/></svg>Один платёж, навсегда</li></ul><a class="btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published">Забрать A0–C1 <svg class="ic"><use href="#i-arrow-up-right"/></svg></a></div>
-      <div class="pr rv"><span class="lv">Для тех, кто уже в теме</span><span class="h-m">B1–C1</span><span class="pp">20 €</span><ul><li><svg class="ic"><use href="#i-check"/></svg>Темы TestDaF, Goethe C1, telc</li><li><svg class="ic"><use href="#i-check"/></svg>Интерактивные гайды в Gemini</li><li><svg class="ic"><use href="#i-check"/></svg>Доступ навсегда</li></ul><a class="btn ghost" href="https://app.lava.top/801303618?tabId=products&amp;sort=published">Выбрать <svg class="ic"><use href="#i-arrow-up-right"/></svg></a></div>
+      <div class="pr rv" id="pr-a"><span class="lv">Для тех, кто с нуля</span><span class="h-m">A0–A2</span><span class="pp">20 €</span><ul><li><svg class="ic"><use href="#i-check"/></svg>Грамматика и лексика с нуля</li><li><svg class="ic"><use href="#i-check"/></svg>Лексика для жизни в Германии</li><li><svg class="ic"><use href="#i-check"/></svg>Доступ навсегда</li></ul><a class="btn ghost" href="https://app.lava.top/801303618?tabId=products&amp;sort=published">Выбрать <svg class="ic"><use href="#i-arrow-up-right"/></svg></a></div>
+      <div class="pr hit rv" id="pr-all"><span class="badge">выгоднее всего</span><span class="lv">Весь путь</span><span class="h-m" style="color:#fff">A0–C1</span><span class="pp">30 €<s>40 €</s></span><ul><li><svg class="ic"><use href="#i-check"/></svg>Обе платформы: 340+ гайдов</li><li><svg class="ic"><use href="#i-check"/></svg>Экзамены, трекер, флеш-карты</li><li><svg class="ic"><use href="#i-check"/></svg>Гайды в Gemini с ИИ-чатом</li><li><svg class="ic"><use href="#i-gift"/></svg>A0–A2 на украинском в подарок</li><li><svg class="ic"><use href="#i-infinity"/></svg>Один платёж, навсегда</li></ul><a class="btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published">Забрать A0–C1 <svg class="ic"><use href="#i-arrow-up-right"/></svg></a></div>
+      <div class="pr rv" id="pr-b"><span class="lv">Для тех, кто уже в теме</span><span class="h-m">B1–C1</span><span class="pp">20 €</span><ul><li><svg class="ic"><use href="#i-check"/></svg>Темы TestDaF, Goethe C1, telc</li><li><svg class="ic"><use href="#i-check"/></svg>Интерактивные гайды в Gemini</li><li><svg class="ic"><use href="#i-check"/></svg>Доступ навсегда</li></ul><a class="btn ghost" href="https://app.lava.top/801303618?tabId=products&amp;sort=published">Выбрать <svg class="ic"><use href="#i-arrow-up-right"/></svg></a></div>
     </div>
     <p class="sm" style="text-align:center;margin-top:16px">Это дешевле, чем Kummerspeck после одного плохого экзамена.</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:30px">
+    <div class="sec-head"><h2 class="h-l split">Частые <span class="it">вопросы</span></h2></div>
+    <div class="faq">
+      <details class="rv"><summary>Это подписка?</summary><p>Нет. Платишь один раз, доступ остаётся навсегда. Новые гайды и обновления для купивших бесплатно.</p></details>
+      <details class="rv"><summary>Что такое Notion и нужно ли в нём разбираться?</summary><p>Notion это приложение для заметок, в нём собрана платформа. Скачиваешь на телефон или ноутбук и открываешь страницы, как сайт. Разбираться не нужно. Плюс: работает без интернета.</p></details>
+      <details class="rv"><summary>Я с нуля. Мне подойдёт?</summary><p>Да, бери A0–A2. Начинается с самых основ. Если планируешь дойти до B1 и дальше, выгоднее сразу A0–C1 за 30 €.</p></details>
+      <details class="rv"><summary>Чем это лучше бесплатных видео?</summary><p>Всё в одном месте и по порядку. После каждой темы упражнение и разбор ответов, плюс трекер прогресса. Не нужно собирать материалы по десяти сайтам.</p></details>
+      <details class="rv"><summary>Остались вопросы</summary><p>Напиши в Telegram <a href="https://t.me/stellasdeutsch">@stellasdeutsch</a>, ответим лично.</p></details>
+    </div>
   </div>
 
   <div class="wrap">
@@ -1252,6 +1414,107 @@ function xInit(){
       }); });
     }
     show();
+  })();
+
+
+  /* progress bar */
+  (function(){ var pb = $('#prog'); function u(){ var d = document.documentElement, m = d.scrollHeight - innerHeight; pb.style.transform = 'scaleX(' + (m > 0 ? scrollY / m : 0) + ')'; } addEventListener('scroll', u, {passive:true}); u(); })();
+
+  /* hero clouds & birds */
+  if(G){
+    gsap.to('#cl1', {x:40, duration:9, yoyo:true, repeat:-1, ease:'sine.inOut'});
+    gsap.to('#cl2', {x:-30, duration:11, yoyo:true, repeat:-1, ease:'sine.inOut'});
+    gsap.fromTo('#birds', {x:-220, y:20}, {x:240, y:-40, duration:14, repeat:-1, ease:'none'});
+  }
+
+  /* chat story */
+  if(G){
+    var items = $$('#chat > *');
+    var ctl = gsap.timeline({scrollTrigger:{trigger:'#chat', start:'top 75%', once:true}});
+    items.forEach(function(el, k){
+      var me = el.classList.contains('me');
+      ctl.from(el, {y:24, scale:.7, rotation:me ? 3 : -3, transformOrigin:me ? '100% 100%' : '0% 100%', duration:.55, ease:'back.out(2.2)'}, k ? '+=.18' : 0);
+    });
+  }
+
+  /* marquee */
+  if(G){
+    var mq = gsap.fromTo('#trk', {xPercent:0}, {xPercent:-50, repeat:-1, ease:'none', duration:26});
+    ScrollTrigger.create({trigger:'#band', start:'top bottom', end:'bottom top', onUpdate:function(self){ var v = gsap.utils.clamp(-6, 6, self.getVelocity()/300); mq.timeScale(1 + Math.abs(v)); gsap.to('#band', {skewX:-v, duration:.4, overwrite:true}); }});
+  }
+
+  /* word anatomy: pieces + article flight */
+  $$('.anat').forEach(function(box){
+    var parts = box.dataset.parts.split('|'), art = box.dataset.art, word = box.dataset.word, h = '';
+    parts.forEach(function(pt, i){
+      var a = pt.split(' ')[0], w = pt.split(' ').slice(1).join(' ');
+      h += (i ? '<span class="op">+</span>' : '') + '<span class="pz' + (i === parts.length-1 ? ' last' : '') + '"><span class="ar">' + a + '</span>' + w + '</span>';
+    });
+    h += '<span class="op">=</span><span class="res2"><span class="ar">' + art + '</span>' + word + '</span><span class="fly">' + art + '</span>';
+    h += '<span class="note">Артикль у всего слова берёт последний кусок: <b>' + parts[parts.length-1] + '</b>.</span>';
+    box.innerHTML = h;
+    box.querySelector('.res2').addEventListener('click', function(){ say(art + ' ' + word); });
+    if(!G) return;
+    var pz = $$('.pz', box), ops = $$('.op', box), res = $('.res2', box), rar = $('.ar', res), fly = $('.fly', box), lar = $('.pz.last .ar', box);
+    var tl = gsap.timeline({scrollTrigger:{trigger:box, start:'top 85%', once:true}});
+    tl.from(pz, {y:-30, rotation:function(i){ return i % 2 ? 10 : -10; }, scale:.5, duration:.7, ease:'bounce.out', stagger:.15})
+      .from(ops, {rotation:-180, scale:.3, duration:.6, ease:'back.out(3)', stagger:.1}, '-=.3')
+      .from(res, {scale:.4, x:-30, duration:.8, ease:'elastic.out(1,.45)'})
+      .add(function(){
+        var b = box.getBoundingClientRect(), s0 = lar.getBoundingClientRect(), s1 = rar.getBoundingClientRect();
+        var x0 = s0.left - b.left, y0 = s0.top - b.top, x1 = s1.left - b.left, y1 = s1.top - b.top;
+        gsap.set(rar, {scale:.4});
+        var path = [{x:x0, y:y0}, {x:(x0+x1)/2, y:Math.min(y0, y1) - 40}, {x:x1, y:y1}];
+        var o = {opacity:1};
+        if(window.MotionPathPlugin) gsap.fromTo(fly, {x:x0, y:y0, opacity:1}, {motionPath:{path:path, curviness:1.4}, duration:1, ease:'power2.inOut', onComplete:function(){ gsap.set(fly, {opacity:0}); gsap.to(rar, {scale:1, duration:.6, ease:'elastic.out(1,.4)'}); }});
+        else gsap.set(rar, {scale:1});
+        gsap.fromTo(lar, {scale:1.3}, {scale:1, duration:.6, ease:'back.out(3)'});
+      });
+  });
+
+  /* platform mock demo */
+  (function(){
+    var mock = $('#mock'); if(!mock) return;
+    var cur = $('#mcur'), caps = $$('#mcap span'), blks = $$('.mblk', mock), a2 = $('.m-a2', mock), us = $$('.mex u', mock), oks = $$('.mok span', mock), vp = $('#mvp');
+    function cap(i){ caps.forEach(function(c, k){ c.classList.toggle('on', k === i); }); }
+    if(!G){ a2.classList.add('on'); return; }
+    function pos(el, dx, dy){ var m = mock.getBoundingClientRect(), r = el.getBoundingClientRect(); return {x:r.left - m.left + (dx||r.width*.5), y:r.top - m.top + (dy||r.height*.5)}; }
+    var tl = gsap.timeline({repeat:-1, repeatDelay:1.2, paused:true});
+    tl.call(function(){ blks.forEach(function(b){ b.classList.remove('on'); }); a2.classList.remove('on'); us.forEach(function(u){ u.textContent = ''; }); gsap.set(oks, {opacity:0, x:-10}); gsap.set(vp, {scaleX:0}); cap(-1); })
+      .set(cur, {x:function(){ return mock.clientWidth*.8; }, y:function(){ return mock.clientHeight*.85; }})
+      .to(cur, {x:function(){ return pos(a2, 20).x; }, y:function(){ return pos(a2).y; }, duration:1, ease:'power2.inOut'})
+      .call(function(){ a2.classList.add('on'); cap(0); }).to(cur, {scale:.8, yoyo:true, repeat:1, duration:.12});
+    blks.forEach(function(b, i){
+      tl.to(cur, {x:function(){ return pos(b, 60).x; }, y:function(){ return pos(b, 0, 14).y; }, duration:.8, ease:'power2.inOut'}, '+=.4')
+        .call(function(){ blks.forEach(function(x){ x.classList.remove('on'); }); b.classList.add('on'); cap(i+1); })
+        .to(cur, {scale:.8, yoyo:true, repeat:1, duration:.12});
+      if(i === 1) tl.to(vp, {scaleX:1, duration:1.6, ease:'none'});
+      if(i === 2) us.forEach(function(u){ var t = u.dataset.t; tl.to({}, {duration:.5, onUpdate:function(){ u.textContent = t.slice(0, Math.ceil(this.progress() * t.length)); }}); });
+      if(i === 3) tl.to(oks, {opacity:1, x:0, duration:.4, stagger:.3, ease:'back.out(2)'});
+    });
+    tl.to({}, {duration:1.5});
+    onView(mock, function(v){ if(v) tl.play(); else tl.pause(); }, {threshold:.3});
+  })();
+
+  /* steps line */
+  if(G && $('#stl')) gsap.to('#stl', {scaleY:1, ease:'none', scrollTrigger:{trigger:'#steps', start:'top 70%', end:'bottom 60%', scrub:true}});
+  if(G && $('#steps')) gsap.from('#steps .dot', {scale:.3, rotation:-90, duration:.8, ease:'back.out(3)', stagger:.25, scrollTrigger:{trigger:'#steps', start:'top 75%', once:true}});
+  if(G && $('.who')) gsap.from('.wh .ico', {rotation:-30, scale:.4, duration:.9, ease:'elastic.out(1,.5)', stagger:.12, scrollTrigger:{trigger:'.who', start:'top 80%', once:true}});
+
+  /* level picker */
+  (function(){
+    var box = $('#lvpick'); if(!box) return;
+    var ans = $('#lvans'), A = $('#pr-a'), B = $('#pr-b'), ALLp = $('#pr-all');
+    var map = {'A0':['a','С нуля бери <b>A0–A2</b> за 20 €. Но если хочешь дойти до B1, выгоднее сразу <b>A0–C1</b> за 30 €.'],'A1':['a','<b>A0–A2</b> закроет базу. Для пути до B1 и экзаменов бери <b>A0–C1</b>.'],'A2':['all','Ты на границе. Повторишь A2 и пойдёшь дальше: <b>A0–C1</b> за 30 €.'],'B1':['b','<b>B1–C1</b> за 20 €: экзаменационные темы, диалоги, Gemini-гайды.'],'B2':['b','<b>B1–C1</b>: TestDaF, Goethe, telc и лексика уровня B2–C1.'],'C1':['b','<b>B1–C1</b>: сложные темы и чат с ИИ для практики.'],'не знаю':['all','Бери <b>A0–C1</b> за 30 €. Найдёшь свой уровень сам, а лишнего платить не придётся.']};
+    box.addEventListener('click', function(e){
+      var b = e.target.closest('button'); if(!b) return;
+      $$('button', box).forEach(function(x){ x.classList.toggle('on', x === b); });
+      var r = map[b.textContent]; ans.innerHTML = r[1];
+      [A, B, ALLp].forEach(function(x){ x.classList.remove('rec'); });
+      var t = r[0] === 'a' ? A : r[0] === 'b' ? B : ALLp; t.classList.add('rec');
+      if(G) gsap.fromTo(t, {scale:.96}, {scale:1, duration:.7, ease:'elastic.out(1,.5)'});
+      if(innerWidth < 900) setTimeout(function(){ t.scrollIntoView({behavior:'smooth', block:'center'}); }, 500);
+    });
   })();
 
   /* AD bits */
